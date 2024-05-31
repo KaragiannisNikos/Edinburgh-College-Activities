@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM querySelectorAll() Method</title>
+    <style>
+      #paragraphs {
+        border: 1px solid black;
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+  <body style="text-align: center">
+    <h1 style="color: green">DOM querySelectorAll() Method</h1>
+    <h2>querySelectorAll() Example</h2>
+    <div id="paragraphs">
+      <p>This is paragraph 1.</p>
+      <p>This is paragraph 2.</p>
+    </div>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+      function myFunction() {
+        let x = document.getElementById("paragraphs").querySelectorAll("p");
+        for (let i = 0; i < x.length; i++) {
+          x[i].style.backgroundColor = "green";
+          x[i].style.color = "white";
+        }
+      }
+    </script>
+  </body>
+</html>

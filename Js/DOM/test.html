@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volume of a Sphere Calculator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      input[type="number"] {
+        padding: 8px;
+        font-size: 16px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Volume of a Sphere Calculator</h2>
+    <form id="sphereForm">
+      <label for="radius">Enter the radius of the sphere:</label><br />
+      <input
+        type="number"
+        id="radius"
+        name="radius"
+        placeholder="Enter radius"
+      /><br />
+      <button type="button" onclick="calculateVolume()">Calculate Volume</button
+      ><br /><br />
+      <label for="volume">Volume of the sphere:</label><br />
+      <input type="number" id="volume" name="volume" readonly /><br />
+    </form>
+
+    <script>
+      function calculateVolume() {
+        // Get the value of the radius input
+        let radius = document.getElementById("radius").value;
+
+        // Check if the radius is empty or not a number
+        if (radius === "" || isNaN(radius)) {
+          alert("Please enter a valid radius.");
+          return;
+        }
+
+        // Convert radius to a number
+        radius = parseFloat(radius);
+
+        // Calculate the volume of the sphere
+        const volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
+
+        // Display the result in the volume input
+        document.getElementById("volume").value = volume.toFixed(2);
+      }
+    </script>
+  </body>
+</html>

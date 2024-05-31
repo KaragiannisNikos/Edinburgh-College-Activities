@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Loops / arrays / functions</title>
+  </head>
+  <body>
+    <script>
+      //1. Activity Loops
+      for (let i = 1; i < 16; i++) {
+        if (i === 0) {
+          console.log(i + " is even");
+        } else if (i % 2 === 0) {
+          console.log(i + " is even");
+        } else {
+          console.log(i + " is odd");
+        }
+      }
+      //2. Activity
+      let num = prompt("Input a number", "");
+
+      for (let e = 1; e < 11; e++) {
+        console.log(`${num} x ${e} = ${num * e}`);
+      }
+
+      //1. Activity Arrays
+      const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      sum = 0;
+      for (let i = 0; i < numbers.length - 1; i++) {
+        sum += numbers[i];
+      }
+      console.log(sum);
+
+      //2. Activity
+      const numb = [20, 30, 25, 35, -16, 60, -100];
+      dum = 0;
+      bum = 0;
+      for (let s = 0; s < numb.length; s++) {
+        dum += numb[s];
+        bum = dum / numb.length;
+      }
+      console.log(bum);
+
+      //3. Activity
+      const numbs = [25, 14, 56, 15, 36, 56, 77, 18, 29, 49];
+
+      min = Math.min(...numbs);
+      max = Math.max(...numbs);
+      console.log("Minimum value for the above array = ", min);
+      console.log("Maximum value for the above array = ", max);
+
+      //1. Activity Functions
+      let arraya = [10, 2, 3, 4, 7];
+
+      function arrayContent() {
+        console.log("The content of the array is: ", arraya);
+      }
+      arrayContent();
+
+      function findTheMax() {
+        max = Math.max(...arraya);
+        console.log("The max value in the array is: ", max);
+      }
+      findTheMax();
+
+      //2. Activity
+      let n = prompt("Enter a number");
+
+      function factorialNumbers(n) {
+        let ans = 1;
+
+        if (n === 0) {
+          return 1;
+        }
+
+        for (let i = 2; i < n; i++) ans = ans * i;
+        return ans;
+      }
+      console.log(factorialNumbers(n));
+
+      //3. Activity
+      let noumero = prompt("Enter a noumero");
+
+      function primeNumber(noumero) {
+        for (let i = 2; i < noumero; i++) {
+          if (noumero % i === 0) return false;
+        }
+        return n > 1;
+      }
+      console.log(primeNumber(noumero));
+    </script>
+  </body>
+</html>

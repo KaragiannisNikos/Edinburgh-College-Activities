@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <h1>Trying JavaScript</h1>
+
+    <script>
+      // 1st Activity
+      console.log(-5 + 8 * 6);
+      console.log((55 + 9) % 9);
+      console.log(20 + (-3 * 5) / 8);
+      console.log(5 + (15 / 3) * 2 - (8 % 3));
+
+      //2nd Activity
+      a = prompt("Input the first number:");
+      b = prompt("Input the second number:");
+
+      console.log("Input the first number:", a);
+      console.log("Input the second number:", b);
+      console.log(
+        "The division of the first number and the second number is:",
+        a % b
+      );
+
+      //1st Activity
+      c = prompt("Input the third number:");
+
+      if (a == b && a == c) {
+        console.log("All numbers are equal");
+      } else if (a != b && b != c && a != c) {
+        console.log("All numbers are different");
+      } else {
+        console.log("Neither all are equal or different");
+      }
+
+      //2nd Activity
+      if (a < b && b < c) {
+        console.log("Increasing order");
+      } else if (a > b && b > c) {
+        console.log("Decreasing order");
+      } else {
+        console.log("Neither increasing or decreasing order");
+      }
+    </script>
+  </body>
+</html>
